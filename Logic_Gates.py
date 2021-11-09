@@ -21,16 +21,20 @@ def not_g(a):
         return 1
 
 def nand_g(a,b):
-    if a == 1 and b == 1:
-        return 0
-    else:
-        return 1
+   # if a == 1 and b == 1:
+   #     return 0
+   # else:
+   #     return 1
+   return not_g(and_g(a,b))
 
 def xor_g(a,b):
-    if(a == 0 and b == 0) or (a == 1 and b == 1):
-        return 0
-    else:
-        return 1
+   # if(a == 0 and b == 0) or (a == 1 and b == 1):
+   #     return 0
+   # else:
+   #     return 1
+   and_1 = and_g(not_g(a),b)
+   and_2 = and(a, not_g(b))
+   return or_g(and_1,and_2)
 
 def main():
     a = int(input("Enter a number either 0 or 1: "))
