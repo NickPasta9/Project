@@ -11,9 +11,8 @@ def draw_and(x, y, size, win):
     # Outline
     Line(Point(x1,y1),Point(x1,y2)).draw(win)
     Line(Point(x1,y1),Point(x2,y2)).draw(win)
-    Line(Point(x1,y2
-    Point(x2,y1)).draw(win)
-    Arc(Point(x,y1,Point(x+size,y2)).draw(win)
+    Line(Point(x1,y2),Point(x2,y1)).draw(win)
+    Arc(Point(x,y1),Point(x+size,y2)).draw(win)
     # Connectors
     Line(Point(x1-10,y3),Point(x1,y3)).draw(win)
     Line(Point(x1-10,y4),Point(x1,y4)).draw(win)
@@ -86,7 +85,7 @@ def and_button(win):
     click = win.getMouse()
     y = click.getY()
     x = click.getX()
-    if 20<x<80 and 30<y<70
+    if 20<x<80 and 30<y<70:
         newClick = win.getMouse()
         x1 = newClick.getX()
         y1 = newClick.getY()
@@ -95,7 +94,7 @@ def and_button(win):
 def or_button(win):
     click = win.getMouse()
     y = click.getY()
-    x = click.getx()
+    x = click.getX()
     if 20<x<80 and 130<y<170:
         newClick = win.getMouse()
         x1 = newClick.getX()
@@ -106,7 +105,7 @@ def not_button(win):
     click = win.getMouse()
     y = click.getY()
     x = click.getX()
-    if 20<x<80 and 230<y<270
+    if 20<x<80 and 230<y<270:
         newClick = win.getMouse()
         x1 = newClick.getX()
         y1 = newClick.getY()
@@ -126,7 +125,7 @@ def nand_button(win):
     click = win.getMouse()
     y = click.getY()
     x = click.getX()
-    if 20<x<80 and 430<y<470
+    if 20<x<80 and 430<y<470:
         newClick = win.getMouse()
         x1 = newClick.getX()
         y1 = newClick.getY()
