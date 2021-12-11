@@ -23,7 +23,7 @@ class DigitalValue:
             while win.getKey() != "Return":
                 continue
             text = inputText.getText()
-            field = Text(self.p,text)
+            field = Text(self.p,text) #JA: This should be the value
             field.draw(win)
             inputText.undraw()
             return text
@@ -52,6 +52,8 @@ class And:
     def draw(self,win):
         size = 100
         draw_and(self.p.getX(), self.p.getY(), size, win)
+        # JA: You should draw the inputs and outputs
+    
 
 
 class Or:
